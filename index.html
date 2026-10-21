@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#3f4292">
+  <meta name="description" content="Acesso ao formulário de diária da Ana Lucia Transportes.">
+  <link rel="manifest" href="./manifest.webmanifest">
+  <link rel="icon" href="./icon-192.png">
+  <title>Formulario de Diaria | Ana Lucia Transportes</title>
+  <style>
+    :root { color-scheme: light; --blue:#3f4292; --red:#ed3039; }
+    * { box-sizing: border-box; }
+    body { margin:0; min-height:100vh; font-family: Arial, Helvetica, sans-serif; background:#f3f5fb; color:#20233a; display:flex; align-items:center; justify-content:center; padding:22px; }
+    main { width:min(100%, 430px); background:white; border-radius:22px; padding:28px 24px; text-align:center; box-shadow:0 12px 35px rgba(28,35,85,.12); }
+    .logo { width:min(100%, 270px); height:auto; object-fit:contain; margin:0 auto 12px; }
+    h1 { color:var(--blue); font-size:25px; margin:10px 0 8px; }
+    p { color:#5d6074; line-height:1.5; margin:0 0 24px; }
+    a.button { display:block; background:var(--blue); color:white; text-decoration:none; font-size:17px; font-weight:700; border-radius:12px; padding:16px 18px; }
+    a.button:focus, a.button:hover { background:#30336f; }
+    .hint { font-size:12px; margin-top:18px; margin-bottom:0; }
+    .redline { width:62px; height:5px; background:var(--red); border-radius:5px; margin:0 auto 18px; }
+  </style>
+</head>
+<body>
+  <main>
+    <img class="logo" src="./icon-512.png" alt="Ana Lucia Transportes">
+    <div class="redline"></div>
+    <h1>Formulario de Diaria</h1>
+    <p>Ana Lucia Transportes<br>Toque no botão abaixo para preencher o formulário.</p>
+    <a class="button" href="https://forms.gle/uKKkWUv3f26hrrJd8" target="_blank" rel="noopener">Preencher formulário</a>
+    <p class="hint">Você pode adicionar este aplicativo à tela inicial do celular pelo menu do navegador.</p>
+  </main>
+  <script>
+    if ('serviceWorker' in navigator && location.protocol.startsWith('http')) {
+      window.addEventListener('load', () => navigator.serviceWorker.register('./service-worker.js').catch(() => {}));
+    }
+  </script>
+</body>
+</html>
